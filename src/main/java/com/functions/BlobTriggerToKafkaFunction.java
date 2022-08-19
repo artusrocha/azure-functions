@@ -22,7 +22,7 @@ public class BlobTriggerToKafkaFunction {
     private Producer<String, String> kafkaProducer = new KafkaProducer<>(buildKafkaProperties());
 
     @FunctionName("BlobTriggerToKafka")
-    @StorageAccount("AzureWebJobsStorage")
+    @StorageAccount("BlobStorageTriggerTarget")
     public void handler(
         @BlobTrigger(name = "triggerBlob", path = BLOB_CONTAINER + "/{name}") String triggerBlob,
         @BindingName("name") String fileName, final ExecutionContext context

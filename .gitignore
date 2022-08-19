@@ -55,6 +55,7 @@ bin/
 build/
 
 .gradle/
+
 local.settings.json
 eventhub-consumer/
 src/main/resources/application.properties

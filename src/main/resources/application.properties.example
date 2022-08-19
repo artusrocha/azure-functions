@@ -1,0 +1,7 @@
+app.eventhub.conn-string= ### Eventhub Connection String Here 
+app.eventhub.topic=test
+
+app.kafka.bootstrap-servers= example.servicebus.windows.net:9093
+app.kafka.user=$ConnectionString
+app.kafka.pass= ### Eventhub Connection String Here
+

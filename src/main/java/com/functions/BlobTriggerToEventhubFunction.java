@@ -22,7 +22,7 @@ public class BlobTriggerToEventhubFunction {
         .buildProducerClient();
 
     @FunctionName("BlobTriggerToEventhub")
-    @StorageAccount("AzureWebJobsStorage")
+    @StorageAccount("BlobStorageTriggerTarget")
     public void handler(
         @BlobTrigger(name = "triggerBlob", path = BLOB_CONTAINER + "/{name}") String triggerBlob,
         @BindingName("name") String fileName, final ExecutionContext context
